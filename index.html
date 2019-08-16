@@ -62,7 +62,7 @@
             function game() {
                 score = 0;
                 for (var i=0; i<5; i++) {
-                    playerSelection = prompt("What would you like to play?");
+                    var playerSelection = prompt("What would you like to play?");
                     result = playRound(playerSelection, computerPlay());
                     console.log(result);
                     if (result == "You win!") {
