@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+
+    <body>
+        <script>
+            function computerPlay() {
+                let rand = Math.floor(Math.random() * 3);
+                if (rand == 0) {
+                    return "Rock";
+                } else if (rand == 1) {
+                    return "Paper";
+                } else if (rand == 2) {
+                    return "Scissors"
+                }
+            }
+
+            function playRound(playerSelection, computerSelection) {
+                player = playerSelection.toUpperCase();
+                
+                if (player = "ROCK") {
+                    switch(computerSelection) {
+                        case "Rock":
+                            return "You tied!";
+                            break;
+                        case "Paper":
+                            return "You lose!";
+                            break;
+                        case "Scissors":
+                            return "You win!";
+                            break;
+                    }
+                } else if (player = "PAPER") {
+                    switch(computerSelection) {
+                        case "Rock":
+                            return "You tied!";
+                            break;
+                        case "Paper":
+                            return "You lose!";
+                            break;
+                        case "Scissors":
+                            return "You win!";
+                            break;
+                    }
+                } else if (player = "SCISSORS") {
+                    switch(computerSelection) {
+                        case "Rock":
+                            return "You tied!";
+                            break;
+                        case "Paper":
+                            return "You lose!";
+                            break;
+                        case "Scissors":
+                            return "You win!";
+                            break;
+                    }
+                }
+            }
+
+            function game() {
+                score = 0;
+                for (var i=0; i<5; i++) {
+                    playerSelection = prompt("What would you like to play?");
+                    result = playRound(playerSelection, computerPlay());
+                    console.log(result);
+                    if (result = "You win!") {
+                        score++;
+                    }
+                }
+
+                if (score > 2) {
+                    console.log("Congratulations! You won the game!");
+                } else {
+                    console.log("You didn't win...");
+                }
+            }
+
+
+        </script>
+    </body>
+</html>
