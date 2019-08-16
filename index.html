@@ -20,7 +20,7 @@
             function playRound(playerSelection, computerSelection) {
                 player = playerSelection.toUpperCase();
                 
-                if (player = "ROCK") {
+                if (player == "ROCK") {
                     switch(computerSelection) {
                         case "Rock":
                             return "You tied!";
@@ -32,7 +32,7 @@
                             return "You win!";
                             break;
                     }
-                } else if (player = "PAPER") {
+                } else if (player == "PAPER") {
                     switch(computerSelection) {
                         case "Rock":
                             return "You tied!";
@@ -44,7 +44,7 @@
                             return "You win!";
                             break;
                     }
-                } else if (player = "SCISSORS") {
+                } else if (player == "SCISSORS") {
                     switch(computerSelection) {
                         case "Rock":
                             return "You tied!";
@@ -65,7 +65,7 @@
                     playerSelection = prompt("What would you like to play?");
                     result = playRound(playerSelection, computerPlay());
                     console.log(result);
-                    if (result = "You win!") {
+                    if (result == "You win!") {
                         score++;
                     }
                 }
