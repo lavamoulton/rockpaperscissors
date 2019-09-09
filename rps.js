@@ -78,6 +78,19 @@ const playerDisp = document.createElement('h6');
 const compDisp = document.createElement('h6');
 const endGame = document.createElement('h5');
 
+var playerScore = 0;
+var compScore = 0;
+
+//button TBA post-game to reset scores and view
+const resetbtn = document.createElement('button');
+resetbtn.style.id = "resetbtn";
+resetbtn.style.width = "25%";
+resetbtn.style.height = "50px";
+resetbtn.addEventListener('click', (e) => {
+    resetGame();
+});
+
+//main game loop
 function game(playerBtn) {
     var playerScore = 0;
     var compScore = 0;
@@ -112,8 +125,8 @@ function game(playerBtn) {
 
     if (playerScore > 4 || compScore > 4) {
      
-        resultsDiv.removeChild(playerDisp);
-        resultsDiv.removeChild(compDisp);
+        //resultsDiv.removeChild(playerDisp);
+        //resultsDiv.removeChild(compDisp);
 
         if (playerScore > 4) {
             endGame.textContent = "You win!";
@@ -142,4 +155,10 @@ function game(playerBtn) {
     } */
 }
 
-game();
+function resetGame() {
+    resultsDiv.removeChild(endGame);
+    playerScore = 0;
+    compScore = 0;
+}
+
+//game();
