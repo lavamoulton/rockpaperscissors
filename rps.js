@@ -73,8 +73,19 @@ const scissorsbtn = document.querySelector('#scissorsbtn');
 scissorsbtn.style.backgroundColor = "black";
 scissorsbtn.style.color = "white";
 
+const resultsDiv = document.querySelector('#results');
+const playerDisp = document.createElement('h6');
+const compDisp = document.createElement('h6');
+const endGame = document.createElement('h5');
+
 function game(playerBtn) {
-    
+    var playerScore = 0;
+    var compScore = 0;
+
+    //reset view
+    resultsDiv.removeChild(playerDisp);
+    resultsDiv.removeChild(compDisp);
+
     //assign player selection based on the button pressed
     if (playerBtn = "rockbtn") {
         playerSelection = "rock";
@@ -86,9 +97,32 @@ function game(playerBtn) {
     
     result = playRound(playerSelection, computerPlay());
 
-    alert(result);
+    if (result == "You win!") {
+        playerScore++;
+    } else if (result == "You lose!") {
+        compScore++;
+    }
+
+    playerDisp.textContent = "Player Score: " + playerScore;
+    compDisp.textContent = "Comp Score:" + compScore;
+    resultsDiv.appendChild(playerDisp);
+    resultsDiv.appendChild(compDisp);
+
+    if (playerScore > 4 || compScore > 4) {
+     
+        resultsDiv.removeChild(playerDisp);
+        resultsDiv.removeChild(compDisp);
+
+        if (playerScore > 4) {
+            endGame.textContent = "You win!";
+        } else if (compScore > 4) {
+            endGame.textContent = "You lose!";
+        }
+
+        resultsDiv.appendChild(endGame);
+    }
     
-    /*score = 0;
+    /*
     for (var i=0; i<5; i++) {
         var playerSelection = prompt("What would you like to play?");
         result = playRound(playerSelection, computerPlay());
