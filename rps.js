@@ -158,6 +158,7 @@ function resetGame() {
     resultsDiv.removeChild(compDisp);
     resultsDiv.removeChild(endGame);
     resultsDiv.removeChild(resetbtn);
+    resultsDiv.removeChild(resultsDisp);
     playerScore = 0;
     compScore = 0;
 }
