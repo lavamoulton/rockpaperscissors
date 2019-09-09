@@ -58,7 +58,20 @@ buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
         game(button.id);
     });
+    button.style.width = "30px";
+    button.style.height = "15px";
 });
+
+const rockbtn = document.querySelector('rockbtn');
+rockbtn.style.backgroundColor = "gray";
+rockbtn.style.color = "white";
+
+const paperbtn = document.querySelector('paperbtn');
+paperbtn.style.backgroundColor = "white";
+
+const scissorsbtn = document.querySelector('scissorsbtn');
+scissorsbtn.style.backgroundColor = "black";
+scissorsbtn.style.color = "white";
 
 function game(playerBtn) {
     
