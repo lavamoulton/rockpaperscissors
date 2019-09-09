@@ -92,14 +92,6 @@ resetbtn.addEventListener('click', (e) => {
 
 //main game loop
 function game(playerBtn) {
-    var playerScore = 0;
-    var compScore = 0;
-
-    //reset view
-    /*if (playerScore > 0 || compScore > 0) {}
-        resultsDiv.removeChild(playerDisp);
-        resultsDiv.removeChild(compDisp);
-    }*/
 
     //assign player selection based on the button pressed
     if (playerBtn = "rockbtn") {
@@ -135,6 +127,7 @@ function game(playerBtn) {
         }
 
         resultsDiv.appendChild(endGame);
+        resultsDiv.appendChild(resetbtn);
     }
     
     /*
