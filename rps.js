@@ -58,8 +58,8 @@ buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
         game(button.id);
     });
-    button.style.width = "30px";
-    button.style.height = "15px";
+    button.style.width = "25%";
+    button.style.height = "50px";
 });
 
 const rockbtn = document.querySelector('rockbtn');
