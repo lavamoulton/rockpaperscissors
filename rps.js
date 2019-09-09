@@ -77,6 +77,7 @@ const resultsDiv = document.querySelector('#results');
 const playerDisp = document.createElement('h6');
 const compDisp = document.createElement('h6');
 const endGame = document.createElement('h5');
+const resultsDisp = document.createElement('h5');
 
 var playerScore = 0;
 var compScore = 0;
@@ -104,6 +105,9 @@ function game(playerBtn) {
     }
     
     result = playRound(playerSelection, computerPlay());
+
+    resultsDisp.textContent = result;
+    resultsDiv.appendChild(resultsDisp);
 
     if (result == "You win!") {
         playerScore++;
