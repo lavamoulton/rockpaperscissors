@@ -86,6 +86,7 @@ const resetbtn = document.createElement('button');
 resetbtn.style.id = "resetbtn";
 resetbtn.style.width = "25%";
 resetbtn.style.height = "50px";
+resetbtn.textContent = "Reset Game";
 resetbtn.addEventListener('click', (e) => {
     resetGame();
 });
@@ -149,7 +150,10 @@ function game(playerBtn) {
 }
 
 function resetGame() {
+    resultsDiv.removeChild(playerDisp);
+    resultsDiv.removeChild(compDisp);
     resultsDiv.removeChild(endGame);
+    resultsDiv.removeChild(resetbtn);
     playerScore = 0;
     compScore = 0;
 }
