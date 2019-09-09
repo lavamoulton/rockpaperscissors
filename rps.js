@@ -62,14 +62,14 @@ buttons.forEach((button) => {
     button.style.height = "50px";
 });
 
-const rockbtn = document.querySelector('rockbtn');
+const rockbtn = document.querySelector('#rockbtn');
 rockbtn.style.backgroundColor = "gray";
 rockbtn.style.color = "white";
 
-const paperbtn = document.querySelector('paperbtn');
+const paperbtn = document.querySelector('#paperbtn');
 paperbtn.style.backgroundColor = "white";
 
-const scissorsbtn = document.querySelector('scissorsbtn');
+const scissorsbtn = document.querySelector('#scissorsbtn');
 scissorsbtn.style.backgroundColor = "black";
 scissorsbtn.style.color = "white";
 
