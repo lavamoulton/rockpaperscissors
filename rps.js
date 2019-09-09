@@ -83,10 +83,10 @@ function game(playerBtn) {
     var compScore = 0;
 
     //reset view
-    if (playerScore > 0 || compScore > 0) {}
+    /*if (playerScore > 0 || compScore > 0) {}
         resultsDiv.removeChild(playerDisp);
         resultsDiv.removeChild(compDisp);
-    }
+    }*/
 
     //assign player selection based on the button pressed
     if (playerBtn = "rockbtn") {
